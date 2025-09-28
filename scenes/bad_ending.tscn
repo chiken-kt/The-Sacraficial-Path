@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://by13yufvoetek"]
+
+[ext_resource type="Script" uid="uid://c8w32bhfqxyyn" path="res://scripts/bad_ending.gd" id="1_qfi2b"]
+[ext_resource type="FontFile" uid="uid://bi0g36nu226u3" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="2_o28dy"]
+
+[node name="Bad Ending" type="Node2D"]
+script = ExtResource("1_qfi2b")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 118.0
+offset_top = 116.0
+offset_right = 1056.0
+offset_bottom = 306.0
+theme_override_fonts/font = ExtResource("2_o28dy")
+theme_override_font_sizes/font_size = 23
+text = "You place the coins into the door’s altar, but the glow is faint and weak. The stone does not move. A low laughter fills the air, echoing from the gods who watch above. ‘Did you truly think you were ready?’ they whisper. ‘Power is earned, not begged for.’ The light dies, the coins scatter back into the shadows, and the path remains sealed. You are trapped still in their endless trial."
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Button" type="Button" parent="."]
+offset_left = 364.0
+offset_top = 425.0
+offset_right = 804.0
+offset_bottom = 562.0
+theme_override_fonts/font = ExtResource("2_o28dy")
+theme_override_font_sizes/font_size = 64
+text = "Restart"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

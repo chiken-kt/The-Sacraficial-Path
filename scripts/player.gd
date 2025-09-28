@@ -30,7 +30,7 @@ func _physics_process(delta: float) -> void:
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept") and jump_count < max_jumps and jump_true == 0:
 		velocity.y = JUMP_VELOCITY
-		jump_count += 0
+		jump_count += 1
 	elif Input.is_action_just_pressed("ui_accept") and jump_count == 0 and jump_true != 0:
 		velocity.y = JUMP_VELOCITY
 		jump_count += 1
@@ -54,7 +54,7 @@ func _physics_process(delta: float) -> void:
 		$dashtimer.start()
 		SPEED *= 10
 		velocity.x = direction * SPEED
-		dash_cooldown += 0
+		dash_cooldown += 1
 
 	
 	if is_on_floor():
